@@ -92,7 +92,13 @@ const Navbar = () => {
           </div>
 
           <div className="py-4 flex flex-col">
-            <ul className="uppercase">
+            <ul
+              className="uppercase"
+              onClick={e => {
+                const target = e.target as HTMLAnchorElement;
+                if (target.tagName === 'A') handleNav();
+              }}
+            >
               <li className="py-4 text-sm">
                 <Link href="/">Home</Link>
               </li>
@@ -138,7 +144,7 @@ const Navbar = () => {
                 </a>
                 <Link href="/#contact">
                   <div
-                    // onClick={() => setNav(!nav)}
+                    onClick={() => setNav(!nav)}
                     className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
                   >
                     <AiOutlineMail />
@@ -146,7 +152,7 @@ const Navbar = () => {
                 </Link>
                 <Link href="/resume">
                   <div
-                    // onClick={() => setNav(!nav)}
+                    onClick={() => setNav(!nav)}
                     className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
                   >
                     <BsFillPersonLinesFill />
