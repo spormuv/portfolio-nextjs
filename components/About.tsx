@@ -31,21 +31,19 @@ const About = () => {
             time I run Code Commerce, a Youtube channel where I teach web
             developement and various front-end technologies.
           </p>
-          <Link href="/#projects">
+          <Link href="#projects">
             <p className="py-2 text-gray-600 underline cursor-pointer">
               Check out some of my latest projects.
             </p>
           </Link>
         </div>
 
-        <div className="relative w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
+        <div className="relative w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 md:aspect-[3/4] aspect-square">
           <Image
             src="/assets/about.jpg"
-            className="rounded-xl object-cover"
+            fill
+            className="rounded-xl object-cover !static"
             alt="my photo"
-            width={400}
-            height={400}
-            style={{ width: '100%', height: '100%' }}
           />
         </div>
       </div>

@@ -28,22 +28,22 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex gap-10">
             <li className="text-sm uppercase hover:border-b">
-              <Link href="/">Home</Link>
+              <Link href="#home">Home</Link>
             </li>
             <li className="text-sm uppercase hover:border-b">
-              <Link href="/#about">About</Link>
+              <Link href="#about">About</Link>
             </li>
             <li className="text-sm uppercase hover:border-b">
-              <Link href="/#skills">Skills</Link>
+              <Link href="#skills">Skills</Link>
             </li>
             <li className="text-sm uppercase hover:border-b">
-              <Link href="/#projects">Projects</Link>
+              <Link href="#projects">Projects</Link>
             </li>
             <li className="text-sm uppercase hover:border-b">
               <Link href="/resume">Resume</Link>
             </li>
             <li className="text-sm uppercase hover:border-b">
-              <Link href="/#contact">Contact</Link>
+              <Link href="#contact">Contact</Link>
             </li>
           </ul>
 
@@ -100,22 +100,22 @@ const Navbar = () => {
               }}
             >
               <li className="py-4 text-sm">
-                <Link href="/">Home</Link>
+                <Link href="#home">Home</Link>
               </li>
               <li className="py-4 text-sm">
-                <Link href="/#about">About</Link>
+                <Link href="#about">About</Link>
               </li>
               <li className="py-4 text-sm">
-                <Link href="/#skills">Skills</Link>
+                <Link href="#skills">Skills</Link>
               </li>
               <li className="py-4 text-sm">
-                <Link href="/#projects">Projects</Link>
+                <Link href="#projects">Projects</Link>
               </li>
               <li className="py-4 text-sm">
                 <Link href="/resume">Resume</Link>
               </li>
               <li className="py-4 text-sm">
-                <Link href="/#contact">Contact</Link>
+                <Link href="#contact">Contact</Link>
               </li>
             </ul>
 
@@ -142,7 +142,7 @@ const Navbar = () => {
                     <FaGithub />
                   </div>
                 </a>
-                <Link href="/#contact">
+                <Link href="#contact">
                   <div
                     onClick={() => setNav(!nav)}
                     className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
