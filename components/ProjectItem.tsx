@@ -20,6 +20,14 @@ const ProjectItem = ({ title, backgroundImg, tech }: Props) => {
           {title}
         </h3>
         <p className="pb-4 pt-2 text-white text-center">{tech}</p>
+        <div>
+          <a href="https://github.com/spormuv" target="_blank" rel="noreferrer">
+            <button className="px-8 py-2 mt-4 mr-8">Code</button>
+          </a>
+          <a href="https://github.com/spormuv" target="_blank" rel="noreferrer">
+            <button className="px-8 py-2 mt-4">Demo</button>
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -2,28 +2,50 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+
+    return () => {
+      window.removeEventListener('scroll', handleShadow);
+    };
+  }, []);
+
   return (
-    <nav className="fixed w-full h-20 shadow-xl z-50">
+    <nav
+      className={`fixed w-full h-20 ${
+        shadow ? 'shadow-xl' : ''
+      } z-50 bg-[#ecf0f3]`}
+    >
       <div className="flex justify-between items-center px-6 w-full h-full 2xl:px-16">
-        <Image
-          src="/assets/navLogo.png"
-          width={125}
-          height={50}
-          alt="navbar logo"
-          className="object-contain"
-        />
+        <Link href="/">
+          <Image
+            src="/assets/navLogo.png"
+            width={125}
+            height={50}
+            alt="navbar logo"
+            className="object-contain"
+          />
+        </Link>
 
         <div>
           <ul className="hidden md:flex gap-10">
@@ -64,7 +86,7 @@ const Navbar = () => {
           className={
             nav
               ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
-              : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+              : 'fixed left-[-150%] top-0 p-10 ease-in duration-500'
           }
         >
           <div>
