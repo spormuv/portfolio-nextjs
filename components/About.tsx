@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,21 +34,35 @@ const About = () => {
             time I run Code Commerce, a Youtube channel where I teach web
             developement and various front-end technologies.
           </p>
-          <Link href="#projects">
+          {/* <Link href="#projects">
             <p className="py-2 text-gray-600 underline cursor-pointer">
               Check out some of my latest projects.
             </p>
-          </Link>
+          </Link> */}
+          <a href="/assets/cv/portfolio-by.pdf" download>
+            CV Download
+          </a>
         </div>
 
-        <div className="relative w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 md:aspect-[3/4] aspect-square">
-          <Image
-            src="/assets/about.jpg"
-            fill
-            className="rounded-xl object-cover !static"
-            alt="my photo"
-          />
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: 30 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <div className="relative w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 md:aspect-[3/4] aspect-square">
+            <Image
+              src="/assets/about.jpg"
+              fill
+              className="rounded-xl object-cover !static"
+              alt="my photo"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
