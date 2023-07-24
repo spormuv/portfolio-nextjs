@@ -45,8 +45,10 @@ const Contact = () => {
                 <h2 className="py-2">Mike</h2>
                 <p>Front-End Developer</p>
                 <p className="py-4">
-                  I am available for freelance or full-time positions. Contact
-                  me and let&apos;s talk.
+                  If you&apos;re looking for a skilled frontend developer to
+                  help bring your web application ideas to life, feel free to
+                  contact me. Let&apos;s discuss how I can contribute to your
+                  team and deliver top-notch results.
                 </p>
               </div>
 

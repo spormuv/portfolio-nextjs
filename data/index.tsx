@@ -51,4 +51,82 @@ export const skillsData = [
   },
 ];
 
-export const projectsData = [];
+export const projectsData = [
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/01.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS', 'Firebase'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/02.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/03.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/04.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/05.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/04.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/05.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/04.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/05.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/05.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+  {
+    title: 'Property Finder',
+    background: '/assets/projects/05.jpg',
+    tools: ['React', 'Typescript', 'Tailwind CSS'],
+    code: 'https://github.com/spormuv/nextjs-car-showcase',
+    demo: 'https://nextjs-car-showcase.netlify.app',
+  },
+];
