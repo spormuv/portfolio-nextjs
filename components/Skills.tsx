@@ -1,137 +1,38 @@
-import Image from 'next/image';
+'use client';
+
+import { skillsData } from '@/data';
+import { motion } from 'framer-motion';
+import SkillsItem from './SkillsItem';
 
 const Skills = () => {
   return (
-    <section id="skills" className="w-full lg:h-screen p-2">
+    <section id="skills" className="w-full lg:h-screen p-2 mt-20">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Skills
         </p>
-        <h2 className="py-4">What I Can Do</h2>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <h2 className="py-4">What I Can Do</h2>
+        </motion.div>
 
-        {/* Skills container */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Skills cards */}
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src="/assets/skills/html.png"
-                  width={64}
-                  height={64}
-                  alt="html"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>HTML</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src="/assets/skills/css.png"
-                  width={64}
-                  height={64}
-                  alt="css"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>CSS</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src="/assets/skills/javascript.png"
-                  width={64}
-                  height={64}
-                  alt="javascript"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>JavaScript</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src="/assets/skills/react.png"
-                  width={64}
-                  height={64}
-                  alt="react"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>React</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src="/assets/skills/tailwind.png"
-                  width={64}
-                  height={64}
-                  alt="tailwind"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Tailwind</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src="/assets/skills/firebase.png"
-                  width={64}
-                  height={64}
-                  alt="firebase"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Firebase</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src="/assets/skills/github1.png"
-                  width={64}
-                  height={64}
-                  alt="github"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Github</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src="/assets/skills/nextjs.png"
-                  width={64}
-                  height={64}
-                  alt="next.js"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Next</h3>
-              </div>
-            </div>
-          </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+          {skillsData.map((item, index) => (
+            <SkillsItem
+              key={index}
+              skill={item.skill}
+              percentage={item.percentage}
+              color={item.color}
+            />
+          ))}
         </div>
       </div>
     </section>

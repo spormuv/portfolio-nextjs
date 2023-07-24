@@ -20,7 +20,7 @@ const Home = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, x: -30 },
+              hidden: { opacity: 0, x: -50 },
               visible: { opacity: 1, x: 0 },
             }}
           >
@@ -44,8 +44,7 @@ const Home = () => {
             </p>
           </motion.div>
           <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
-            I&#39;m focused on building responsive front-end web applications
-            integrating back-end technologies.
+            I&#39;m focused on building responsive frontend web applications
           </p>
 
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
