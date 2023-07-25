@@ -14,8 +14,8 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="w-full pt-20">
-      <div className="max-w-[1240px] mx-auto px-2 py-16">
+    <section id="projects" className="w-full lg:min-h-screen px-6 pt-28">
+      <div className="max-w-[1240px] mx-auto">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Projects
         </p>
@@ -32,7 +32,7 @@ const Projects = () => {
           <h2 className="py-4">What I&apos;ve Built</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-8 md:px-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
           {projectsData?.slice(0, nextItems).map((project, ind) => (
             <div
               key={ind}
@@ -77,7 +77,7 @@ const Projects = () => {
               className="p-4 text-gray-100 mt-4 hover:scale-105 transition"
               onClick={handleLoadMore}
             >
-              Load More
+              Show More
             </button>
           </div>
         )}

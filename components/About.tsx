@@ -2,16 +2,12 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="w-full md:h-screen p-6 flex items-center py-16"
-    >
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
-        <div className="col-span-2">
+    <section id="about" className="w-full px-6 pt-28 flex items-center">
+      <div className="max-w-[1240px] m-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-2 mb-10">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">
             About
           </p>
@@ -49,6 +45,7 @@ const About = () => {
         </div>
 
         <motion.div
+          className="my-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

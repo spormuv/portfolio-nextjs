@@ -6,8 +6,8 @@ import SkillsItem from './SkillsItem';
 
 const Skills = () => {
   return (
-    <section id="skills" className="w-full lg:h-screen p-2 mt-20">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+    <section id="skills" className="w-full lg:min-h-screen px-6 pt-28">
+      <div className="max-w-[1240px] mx-auto flex flex-col justify-center">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Skills
         </p>

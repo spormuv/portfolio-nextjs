@@ -59,8 +59,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full lg:h-screen pt-20">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
+    <section id="contact" className="w-full lg:min-h-screen px-6 pt-28 pb-6">
+      <div className="max-w-[1240px] m-auto">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
         </p>
@@ -123,7 +123,7 @@ const Contact = () => {
               hidden: { opacity: 0, x: 100 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="lg:col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl p-6"
+            className="lg:col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl p-4"
           >
             {/* Form */}
             <form onSubmit={submitHandler} ref={formRef}>
