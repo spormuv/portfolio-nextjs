@@ -45,7 +45,7 @@ const Projects = () => {
                   alt={project.title}
                   className="object-cover rounded-lg"
                 />
-                <div className="absolute w-full h-full bg-gradient-to-r from-[#5651e5] to-[#709dff] opacity-90 top-0 left-0 z-10 flex items-center justify-center gap-10 scale-0 group-hover:scale-100 transition-all duration-500 ease-out rounded-lg">
+                <div className="absolute w-full h-full bg-gradient-to-r from-[#5651e5] to-[#709dff] opacity-90 top-0 left-0 z-10 flex items-center justify-center gap-10 scale-0 group-hover:scale-100 transition-all duration-300 ease-out rounded-lg">
                   <a href={project.code} target="_blank">
                     <AiFillGithub className="text-4xl hover:scale-125 transition-all duration-300" />
                   </a>
@@ -73,7 +73,10 @@ const Projects = () => {
 
         {nextItems < projectsData.length && (
           <div className="text-center">
-            <button className="p-4 text-gray-100 mt-4" onClick={handleLoadMore}>
+            <button
+              className="p-4 text-gray-100 mt-4 hover:scale-105 transition"
+              onClick={handleLoadMore}
+            >
               Load More
             </button>
           </div>

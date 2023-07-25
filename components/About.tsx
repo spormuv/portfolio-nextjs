@@ -41,13 +41,10 @@ const About = () => {
             users alike. I am excited to work as part of a team to build
             innovative and impactful web projects.
           </p>
-          {/* <Link href="#projects">
-            <p className="py-2 text-gray-600 underline cursor-pointer">
-              Check out some of my latest projects.
-            </p>
-          </Link> */}
           <a href="/assets/cv/portfolio-by.pdf" download>
-            <button className="p-4 text-gray-100 mt-4">Download CV</button>
+            <button className="p-4 text-gray-100 mt-4 hover:scale-105 transition">
+              Download CV
+            </button>
           </a>
         </div>
 

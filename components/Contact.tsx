@@ -1,14 +1,41 @@
 'use client';
 
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
+import { FormEvent, MutableRefObject, useEffect, useRef } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { BsTelephoneOutbound } from 'react-icons/bs';
+import { GoLocation } from 'react-icons/go';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
+  const formRef = useRef() as MutableRefObject<HTMLFormElement>;
+
+  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_u6zhdit',
+        'template_6slahar',
+        formRef.current,
+        'wnqXsQwqt6-DP0yar'
+      )
+      .then(
+        res => {
+          toast(`Your message has been sent! ${res.text}`);
+        },
+        err => {
+          toast.error(`Error! ${err.text}`);
+        }
+      )
+      .then(() => {
+        formRef.current.reset();
+      });
+  };
+
   return (
     <section id="contact" className="w-full lg:h-screen pt-20">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
@@ -32,56 +59,33 @@ const Contact = () => {
           {/* Left (up) side */}
           <div className="lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
             <div className="lg:p-4 h-full ">
-              <div className="relative aspect-video">
-                <Image
-                  className="rounded-xl object-cover"
-                  src="/assets/contact.jpg"
-                  alt="contact image"
-                  fill
-                />
-              </div>
+              <p className="py-4 text-lg">
+                If you&apos;re looking for a skilled frontend developer to help
+                bring your web application ideas to life, feel free to contact
+                me. Let&apos;s discuss how I can contribute to your team and
+                deliver top-notch results.
+              </p>
 
               <div>
-                <h2 className="py-2">Mike</h2>
-                <p>Front-End Developer</p>
-                <p className="py-4">
-                  If you&apos;re looking for a skilled frontend developer to
-                  help bring your web application ideas to life, feel free to
-                  contact me. Let&apos;s discuss how I can contribute to your
-                  team and deliver top-notch results.
-                </p>
-              </div>
-
-              <div>
-                <p className="uppercase pt-8">Connect With Me</p>
-                <div className="flex items-center justify-between py-4">
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <FaLinkedinIn />
-                    </div>
-                  </a>
-                  <a
-                    href="https://github.com/spormuv"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <FaGithub />
-                    </div>
-                  </a>
-
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <div className="flex gap-4 my-4 items-center">
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-4 text-lg cursor-pointer hover:scale-110 ease-in duration-300">
                     <AiOutlineMail />
                   </div>
-                  <Link href="/resume">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <BsFillPersonLinesFill />
-                    </div>
-                  </Link>
+                  <div>spormuv@gmail.com</div>
+                </div>
+
+                <div className="flex gap-4 my-4 items-center">
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-4 text-lg cursor-pointer hover:scale-110 ease-in duration-300">
+                    <BsTelephoneOutbound />
+                  </div>
+                  <div>+375-29-3073317</div>
+                </div>
+
+                <div className="flex gap-4 my-4 items-center">
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-4 text-lg cursor-pointer hover:scale-110 ease-in duration-300">
+                    <GoLocation />
+                  </div>
+                  <div>Minsk, Belarus</div>
                 </div>
               </div>
             </div>
@@ -91,54 +95,37 @@ const Contact = () => {
           <div className="lg:col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
               {/* Form */}
-              <form action="" method="post" encType="multipart/form-data">
-                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                  <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">Name</label>
-                    <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
-                      type="text"
-                      name="name"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">
-                      Phone Number
-                    </label>
-                    <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
-                      type="text"
-                      name="phone"
-                    />
-                  </div>
-                </div>
-
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Email</label>
+              <form onSubmit={submitHandler} ref={formRef}>
+                <div className="flex flex-col gap-4">
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-2 rounded-lg p-3 border-gray-300"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                  />
+                  <input
+                    className="border-2 rounded-lg p-3 border-gray-300"
                     type="email"
                     name="email"
+                    placeholder="Email"
                   />
-                </div>
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Subject</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-2 rounded-lg p-3 border-gray-300"
                     type="text"
                     name="subject"
+                    placeholder="Subject"
                   />
-                </div>
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Message</label>
                   <textarea
-                    className="w-full resize-none border-2 rounded-lg p-3 border-gray-300"
+                    className="resize-none border-2 rounded-lg p-3 border-gray-300 h-24"
                     name="message"
+                    placeholder="Message"
                   />
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">
-                  Send Message
-                </button>
+                <div className="text-center lg:mt-4">
+                  <button className="p-4 text-gray-100 mt-4 w-full">
+                    Send Message
+                  </button>
+                </div>
               </form>
             </div>
           </div>
