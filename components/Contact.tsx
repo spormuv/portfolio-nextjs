@@ -3,17 +3,39 @@
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FormEvent, MutableRefObject, useEffect, useRef } from 'react';
+import { FormEvent, MutableRefObject, useRef } from 'react';
+// import { useForm } from 'react-hook-form';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsTelephoneOutbound } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import { toast } from 'react-toastify';
 
+// interface FormValues {
+//   name: string;
+//   email: string;
+//   subject: string;
+//   message: string;
+// }
+
 const Contact = () => {
   const formRef = useRef() as MutableRefObject<HTMLFormElement>;
+  // const {
+  //   trigger,
+  //   register,
+  //   formState: { errors },
+  // } = useForm<FormValues>({
+  //   mode: 'onBlur',
+  // });
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+    // trigger()
+    //   .then(isValid => {
+    //     if (!isValid) {
+    //       e.preventDefault();
+    //     }
+    //   })
+    //   .catch(error => console.error(error));
     e.preventDefault();
 
     emailjs
@@ -92,43 +114,53 @@ const Contact = () => {
           </div>
 
           {/* Right (down) side */}
-          <div className="lg:col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
-            <div className="p-4">
-              {/* Form */}
-              <form onSubmit={submitHandler} ref={formRef}>
-                <div className="flex flex-col gap-4">
-                  <input
-                    className="border-2 rounded-lg p-3 border-gray-300"
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                  />
-                  <input
-                    className="border-2 rounded-lg p-3 border-gray-300"
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                  />
-                  <input
-                    className="border-2 rounded-lg p-3 border-gray-300"
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                  />
-                  <textarea
-                    className="resize-none border-2 rounded-lg p-3 border-gray-300 h-24"
-                    name="message"
-                    placeholder="Message"
-                  />
-                </div>
-                <div className="text-center lg:mt-4">
-                  <button className="p-4 text-gray-100 mt-4 w-full">
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            className="lg:col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl p-6"
+          >
+            {/* Form */}
+            <form onSubmit={submitHandler} ref={formRef}>
+              <div className="flex flex-col gap-4">
+                <input
+                  className="border-2 rounded-lg p-3 border-gray-300"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  className="border-2 rounded-lg p-3 border-gray-300"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                />
+                <input
+                  className="border-2 rounded-lg p-3 border-gray-300"
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                />
+                <textarea
+                  className="resize-none border-2 rounded-lg p-3 border-gray-300 h-40"
+                  name="message"
+                  placeholder="Message"
+                  required
+                />
+              </div>
+              <div className="text-center lg:mt-4">
+                <button className="p-4 text-gray-100 mt-4 w-full">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </motion.div>
         </div>
 
         <div className="flex justify-center py-12">
