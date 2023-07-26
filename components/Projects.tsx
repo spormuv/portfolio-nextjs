@@ -29,7 +29,7 @@ const Projects = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h2 className="py-4">What I&apos;ve Built</h2>
+          <h2 className="py-4">My Recent Projects</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-8">

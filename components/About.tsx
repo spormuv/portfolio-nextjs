@@ -21,7 +21,7 @@ const About = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <h2 className="py-4">Who I Am</h2>
+            <h2 className="py-4">Get To Know Me</h2>
           </motion.div>
           <p className="py-2 text-gray-600">
             As a Junior Frontend Developer, I am passionate about creating
@@ -37,7 +37,7 @@ const About = () => {
             users alike. I am excited to work as part of a team to build
             innovative and impactful web projects.
           </p>
-          <a href="/assets/cv/portfolio-by.pdf" download>
+          <a href="/assets/cv/portfolio-mike-by.pdf" download>
             <button className="p-4 text-gray-100 mt-4 hover:scale-105 transition">
               Download CV
             </button>

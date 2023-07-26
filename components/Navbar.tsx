@@ -37,31 +37,30 @@ const Navbar = () => {
       } z-50 bg-[#ecf0f3]`}
     >
       <div className="flex justify-between items-center px-6 w-full h-full 2xl:px-16">
-        <Link href="/">
+        <div className="relative w-20 h-[70px]">
           <Image
             src="/assets/navLogo.png"
-            width={125}
-            height={50}
+            fill
             alt="navbar logo"
             className="object-contain"
           />
-        </Link>
+        </div>
 
         <div>
           <ul className="hidden md:flex gap-10">
-            <li className="text-sm uppercase hover:border-b hover:border-b-gray-500">
+            <li className="text-sm uppercase hover:border-b hover:border-b-gray-400">
               <Link href="#home">Home</Link>
             </li>
-            <li className="text-sm uppercase hover:border-b hover:border-b-gray-500">
+            <li className="text-sm uppercase hover:border-b hover:border-b-gray-400">
               <Link href="#about">About</Link>
             </li>
-            <li className="text-sm uppercase hover:border-b hover:border-b-gray-500">
+            <li className="text-sm uppercase hover:border-b hover:border-b-gray-400">
               <Link href="#skills">Skills</Link>
             </li>
-            <li className="text-sm uppercase hover:border-b hover:border-b-gray-500">
+            <li className="text-sm uppercase hover:border-b hover:border-b-gray-400">
               <Link href="#projects">Projects</Link>
             </li>
-            <li className="text-sm uppercase hover:border-b hover:border-b-gray-500">
+            <li className="text-sm uppercase hover:border-b hover:border-b-gray-400">
               <Link href="#contact">Contact</Link>
             </li>
           </ul>
@@ -88,13 +87,14 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image
-                src="/assets/navLogo.png"
-                width={125}
-                height={50}
-                alt="navbar logo"
-                className="object-contain"
-              />
+              <div className="relative w-20 h-[70px]">
+                <Image
+                  src="/assets/navLogo.png"
+                  fill
+                  alt="navbar logo"
+                  className="object-contain"
+                />
+              </div>
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -119,19 +119,44 @@ const Navbar = () => {
               }}
             >
               <li className="py-4 text-sm">
-                <Link href="#home">Home</Link>
+                <Link
+                  href="#home"
+                  className="hover:border-b hover:border-b-gray-400"
+                >
+                  Home
+                </Link>
               </li>
               <li className="py-4 text-sm">
-                <Link href="#about">About</Link>
+                <Link
+                  href="#about"
+                  className="hover:border-b hover:border-b-gray-400"
+                >
+                  About
+                </Link>
               </li>
               <li className="py-4 text-sm">
-                <Link href="#skills">Skills</Link>
+                <Link
+                  href="#skills"
+                  className="hover:border-b hover:border-b-gray-400"
+                >
+                  Skills
+                </Link>
               </li>
               <li className="py-4 text-sm">
-                <Link href="#projects">Projects</Link>
+                <Link
+                  href="#projects"
+                  className="hover:border-b hover:border-b-gray-400"
+                >
+                  Projects
+                </Link>
               </li>
               <li className="py-4 text-sm">
-                <Link href="#contact">Contact</Link>
+                <Link
+                  href="#contact"
+                  className="hover:border-b hover:border-b-gray-400"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
 
@@ -141,7 +166,7 @@ const Navbar = () => {
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/mike-tarasov/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -164,14 +189,6 @@ const Navbar = () => {
                     className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
                   >
                     <AiOutlineMail />
-                  </div>
-                </Link>
-                <Link href="/resume">
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
-                  >
-                    <BsFillPersonLinesFill />
                   </div>
                 </Link>
               </div>
