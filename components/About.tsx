@@ -55,11 +55,11 @@ const About = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div className="relative w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 md:aspect-[3/4] aspect-square">
+          <div className="relative w-full h-auto m-auto shadow-md shadow-gray-400 rounded-full flex items-center justify-center hover:scale-105 ease-in duration-300 aspect-square">
             <Image
               src="/assets/about.jpg"
               fill
-              className="rounded-xl object-cover !static"
+              className="rounded-full object-cover !static"
               alt="my photo"
             />
           </div>

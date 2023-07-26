@@ -40,10 +40,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_u6zhdit',
-        'template_6slahar',
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
         formRef.current,
-        'wnqXsQwqt6-DP0yar'
+        process.env.NEXT_PUBLIC_PUBLIC_KEY as string
       )
       .then(
         res => {
