@@ -21,7 +21,7 @@ export const skillsData = [
   },
   {
     skill: 'Node.js',
-    percentage: 40,
+    percentage: 80,
     color: '#87BF00',
   },
   {
@@ -52,6 +52,13 @@ export const skillsData = [
 ];
 
 export const projectsData = [
+  {
+    title: 'Node.js Bootcamp',
+    code: 'https://github.com/spormuv/node-express-mongo',
+    demo: 'https://natours-app-ulqo.onrender.com/',
+    tools: ['Node.js', 'Express', 'MongoDB'],
+    background: '/assets/projects/node-bootcamp.jpg',
+  },
   {
     title: 'car showcase',
     code: 'https://github.com/spormuv/nextjs-car-showcase',
