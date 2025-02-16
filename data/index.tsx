@@ -21,7 +21,7 @@ export const skillsData = [
   },
   {
     skill: 'Node.js',
-    percentage: 80,
+    percentage: 85,
     color: '#87BF00',
   },
   {
@@ -31,7 +31,7 @@ export const skillsData = [
   },
   {
     skill: 'React, Redux',
-    percentage: 70,
+    percentage: 85,
     color: '#5ED3F3',
   },
   {
@@ -53,7 +53,28 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    title: 'Node.js Bootcamp',
+    title: 'the wild oasis',
+    code: 'https://github.com/spormuv/react-ultimate/tree/main/17-the-wild-oasis',
+    demo: 'https://react-ultimate.vercel.app',
+    tools: ['React Query', 'Supabase', 'Styled-Components', 'Recharts'],
+    background: '/assets/projects/wild-oasis.jpg',
+  },
+  {
+    title: 'fast react pizza',
+    code: 'https://github.com/spormuv/react-ultimate/tree/main/16-fast-react-pizza',
+    demo: 'https://fast-react-pizza777.netlify.app/',
+    tools: ['React', 'Redux Toolkit', 'TailwindCSS'],
+    background: '/assets/projects/react-pizza.jpg',
+  },
+  {
+    title: 'worldwise',
+    code: 'https://github.com/spormuv/react-ultimate/tree/main/11-worldwise',
+    demo: 'https://github.com/spormuv/react-ultimate/tree/main/11-worldwise',
+    tools: ['React', 'Leaflet', 'API'],
+    background: '/assets/projects/worldwise.jpg',
+  },
+  {
+    title: 'node.js bootcamp',
     code: 'https://github.com/spormuv/node-express-mongo',
     demo: 'https://natours-app-ulqo.onrender.com/',
     tools: ['Node.js', 'Express', 'MongoDB'],
