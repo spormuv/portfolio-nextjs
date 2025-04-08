@@ -53,6 +53,13 @@ export const skillsData = [
 
 export const projectsData = [
   {
+    title: 'the wild oasis website',
+    code: 'https://github.com/spormuv/react-ultimate/tree/main/19-the-wild-oasis-website',
+    demo: 'https://react-ultimate-website.vercel.app/',
+    tools: ['Next.js', 'Supabase'],
+    background: '/assets/projects/wild-oasis-website.jpg',
+  },
+  {
     title: 'the wild oasis',
     code: 'https://github.com/spormuv/react-ultimate/tree/main/17-the-wild-oasis',
     demo: 'https://react-ultimate.vercel.app',
