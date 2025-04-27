@@ -53,6 +53,13 @@ export const skillsData = [
 
 export const projectsData = [
   {
+    title: 'MERN Auth App with JWT and TS',
+    code: 'https://github.com/spormuv/MERN-auth',
+    // demo: 'https://react-ultimate-website.vercel.app/',
+    tools: ['MERN', 'TypeScript', 'JWT', 'React Query', 'Chakra UI', 'Resend'],
+    background: '/assets/projects/mern-auth.jpg',
+  },
+  {
     title: 'the wild oasis website',
     code: 'https://github.com/spormuv/react-ultimate/tree/main/19-the-wild-oasis-website',
     demo: 'https://react-ultimate-website.vercel.app/',
