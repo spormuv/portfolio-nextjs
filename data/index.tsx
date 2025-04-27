@@ -53,7 +53,7 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    title: 'MERN Auth App with JWT and TS',
+    title: 'MERN Auth App',
     code: 'https://github.com/spormuv/MERN-auth',
     // demo: 'https://react-ultimate-website.vercel.app/',
     tools: ['MERN', 'TypeScript', 'JWT', 'React Query', 'Chakra UI', 'Resend'],
