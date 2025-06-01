@@ -10,19 +10,14 @@ export const skillsData = [
     color: '#254BDD',
   },
   {
+    skill: 'Tailwind CSS',
+    percentage: 80,
+    color: '#36B7F0',
+  },
+  {
     skill: 'JavaScript',
     percentage: 80,
     color: '#EFD81D',
-  },
-  {
-    skill: 'Git',
-    percentage: 60,
-    color: '#E84E31',
-  },
-  {
-    skill: 'Node.js',
-    percentage: 85,
-    color: '#87BF00',
   },
   {
     skill: 'TypeScript',
@@ -40,9 +35,19 @@ export const skillsData = [
     color: '#000000',
   },
   {
-    skill: 'Tailwind CSS',
-    percentage: 90,
-    color: '#36B7F0',
+    skill: 'Node.js',
+    percentage: 70,
+    color: '#87BF00',
+  },
+  {
+    skill: 'MongoDB',
+    percentage: 60,
+    color: '#47A248',
+  },
+  {
+    skill: 'PostgreSQL',
+    percentage: 40,
+    color: '#336791',
   },
   {
     skill: 'Jest, Vitest',

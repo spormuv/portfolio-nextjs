@@ -24,7 +24,7 @@ const About = () => {
             <h2 className='py-4'>Get To Know Me</h2>
           </motion.div>
           <p className='py-2 text-gray-600'>
-            As a Junior Frontend Developer, I am passionate about creating
+            As a junior full-stack web developer, I am passionate about creating
             dynamic and engaging user experiences on the web. I am eager to
             apply my skills to develop responsive and efficient web
             applications. I am always seeking to expand my knowledge of modern
@@ -37,7 +37,7 @@ const About = () => {
             users alike. I am excited to work as part of a team to build
             innovative and impactful web projects.
           </p>
-          <a href='/assets/cv/portfolio-mike-by.pdf' download>
+          <a href='/assets/cv/cv-dev-mike.pdf' download>
             <button className='p-4 text-gray-100 mt-4 hover:scale-105 transition'>
               Download CV
             </button>
