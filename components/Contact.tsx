@@ -82,10 +82,10 @@ const Contact = () => {
           <div className='lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
             <div className='lg:p-4 h-full '>
               <p className='py-4 text-lg'>
-                If you&apos;re looking for a skilled frontend developer to help
-                bring your web application ideas to life, feel free to contact
-                me. Let&apos;s discuss how I can contribute to your team and
-                deliver top-notch results.
+                If you&apos;re looking for a skilled web developer to help bring
+                your web application ideas to life, feel free to contact me.
+                Let&apos;s discuss how I can contribute to your team and deliver
+                top-notch results.
               </p>
 
               <div>

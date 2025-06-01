@@ -24,7 +24,7 @@ const About = () => {
             <h2 className='py-4'>Get To Know Me</h2>
           </motion.div>
           <p className='py-2 text-gray-600'>
-            As a junior full-stack web developer, I am passionate about creating
+            As a full-stack web developer, I am passionate about creating
             dynamic and engaging user experiences on the web. I am eager to
             apply my skills to develop responsive and efficient web
             applications. I am always seeking to expand my knowledge of modern
