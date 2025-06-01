@@ -28,8 +28,8 @@ const About = () => {
             dynamic and engaging user experiences on the web. I am eager to
             apply my skills to develop responsive and efficient web
             applications. I am always seeking to expand my knowledge of modern
-            frontend frameworks and technologies, and I am committed to creating
-            clean, maintainable and scalable code.
+            frameworks and technologies, and I am committed to creating clean,
+            maintainable and scalable code.
           </p>
           <p className='py-2 text-gray-600'>
             With strong problem-solving and analytical skills, I am dedicated to
